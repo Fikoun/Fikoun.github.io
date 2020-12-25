@@ -6,12 +6,19 @@
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Title</title>
-
+        <script src="pixi/pixi.min.js"></script>
     </head>
 
     <body>
 
-        Works!
+        <script type="text/javascript">
+            let type = "WebGL";
+            if(!PIXI.utils.isWebGLSupported()){
+              type = "canvas";
+            }
+        
+            PIXI.utils.sayHello(type);
+        </script>
 
     <body>
 
